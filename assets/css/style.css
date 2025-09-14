@@ -1,111 +1,159 @@
-/* Reset e base */
+/* 🎨 Variáveis de cor e fonte */
+:root {
+    --primary-color: #ef5350;
+    --background-color: #61b3f7;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --text-color: #333;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 🔄 Reset e base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #61b3f7;
-}
-
-/* Conteúdo principal */
-main {
-    margin: 20px auto;
-    max-width: 1200px;
-    background-color: #fff;
-    padding: 30px 2%;
-}
-
-main h2 {
-    color: #ef5350;
-    font-size: clamp(2rem, 5vw, 2.5rem);
-    text-align: center;
-    padding: 20px 0;
-}
-
-/* Container de Pokémon */
-.pokemon-boxes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin: 20px 0;
-}
-
-.pokemon-box {
-    flex: 1 1 calc(33.333% - 20px);
-    border-radius: 10px;
-    background-color: rgba(230, 230, 230, 0.637);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.pokemon-box:hover {
-    transform: scale(1.02);
-}
-
-.pokemon-box img {
-    width: 100%;
-    display: block;
-}
-
-/* Informações do Pokémon */
-.pokemon-info {
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    min-height: 100vh;
 }
 
-.pokemon-info h3 {
-    color: #ef5350;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+/* 🏠 Estilos do cabeçalho */
+header {
+    width: 100%;
+    padding: 1rem 0;
+    background-color: var(--primary-color);
+    color: #fff;
     text-align: center;
 }
 
-.pokemon-info span {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #000;
-    margin-bottom: 10px;
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
-.pokemon-info p {
-    background-color: #ef5350;
-    color: #fff;
-    font-size: 1rem;
-    padding: 5px 10px;
-    border-radius: 10px;
-    margin: 5px;
+header nav {
+    margin-top: 1rem;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .pokemon-box {
-        flex: 1 1 calc(50% - 20px);
-    }
-}
-
-@media (max-width: 480px) {
-    .pokemon-box {
-        flex: 1 1 100%;
-    }
-}
-
-/* Rodapé */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #ef5350;
-    color: #fff;
-    font-size: 1rem;
-    margin-top: 20px;
-}
-footer a {
+header nav a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    margin: 0 1rem;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+/* 📦 Estilos do contêiner principal */
+main {
+    margin: 2rem auto;
+    max-width: 1200px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    color: var(--primary-color);
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+/* 🃏 Estilos dos cards de Pokémon */
+.pokemon-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.pokemon-box {
+    background-color: var(--card-bg);
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.pokemon-box:hover {
+    transform: scale(1.05);
+}
+
+.pokemon-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pokemon-info {
+    margin-top: 1rem;
+}
+
+.pokemon-name {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.pokemon-id {
+    font-size: 1rem;
+    color: #666;
+}
+
+.pokemon-types {
+    margin-top: 0.5rem;
+}
+
+.type {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.875rem;
+}
+.type + .type {
+    margin-left: 0.5rem;
+}
+/* 📱 Responsividade */
+@media (max-width: 768px) {
+    .pokemon-boxes {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .pokemon-name {
+        font-size: 1.25rem;
+    }
+
+    .pokemon-id {
+        font-size: 0.875rem;
+    }
+
+    .type {
+        font-size: 0.75rem;
+    }
+}
+/* 🧹 Limpeza de estilos adicionais */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
 }
