@@ -2,7 +2,7 @@ var quantidade = document.getElementById('quantidade');
 
 quantidade.addEventListener('keyup', (e) =>{
     if(e.key === 'Enter'){
-        let value = parseInt(quantidade.value);
+        let value = Number(quantidade.value);
         if(!isNaN(value)){
             pegaPokemons(value);
         }
@@ -32,12 +32,12 @@ function pegaPokemons(quantidade){
                         pokemons.map((val) => {
                             pokemonBoxes.innerHTML += `
                                         <div class="pokemon-box">
-                                            <img src="`+ val.image + `" alt="Pokeball" class="pokeball">
+                                            <img src="${val.image}" alt="Pokeball" class="pokeball">
                                             <div class="pokemon-info">
-                                                <h3 class="pokemon-name">`+ val.name + `</h3>
-                                                <p class="pokemon-id">#` + val.id + `</p>
+                                                <h3 class="pokemon-name">${val.name}</h3>
+                                                <p class="pokemon-id">#${val.id}</p>
                                                 <div class="pokemon-types">
-                                                    <span class="type">` + val.types.join(', ') + `</span>
+                                                    <span class="type">${val.types.join(', ')}</span>
                                                 </div>
                                             </div>
                                         </div>
