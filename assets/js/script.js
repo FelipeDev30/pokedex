@@ -1,4 +1,16 @@
-fetch('https://pokeapi.co/api/v2/pokemon?limit=10')
+var quantidade = document.getElementById('quantidade');
+
+quantidade.addEventListener('keyup', (e) =>{
+    if(e.key === 'Enter'){
+        let value = parseInt(quantidade.value);
+        if(!isNaN(value)){
+            pegaPokemons(value);
+        }
+    }
+})
+
+function pegaPokemons(quantidade){
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=' + quantidade)
     .then(response => response.json())
     .then(allpokemon => {
         var pokemons = [];
@@ -14,7 +26,7 @@ fetch('https://pokeapi.co/api/v2/pokemon?limit=10')
                         types: pokemonSingle.types.map(type => type.type.name),
                         image: pokemonSingle.sprites.front_default ? pokemonSingle.sprites.front_default : 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png'
                     })
-                    if (pokemons.length == 10) {
+                    if (pokemons.length == quantidade) {
                         var pokemonBoxes = document.querySelector('.pokemon-boxes');
                         pokemonBoxes.innerHTML = '';
                         pokemons.map((val) => {
@@ -35,3 +47,10 @@ fetch('https://pokeapi.co/api/v2/pokemon?limit=10')
                 })
         })
     })
+}
+
+function init(){
+    pegaPokemons(10);
+}
+
+init();
