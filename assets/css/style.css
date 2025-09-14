@@ -55,7 +55,7 @@ header nav a:hover {
 main {
     margin: 2rem auto;
     max-width: 1200px;
-    background-color: #fff;
+    background-color: #1b1a1ab6;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -139,6 +139,7 @@ main h2 {
         font-size: 0.75rem;
     }
 }
+
 /* 🧹 Limpeza de estilos adicionais */
 a {
     text-decoration: none;
