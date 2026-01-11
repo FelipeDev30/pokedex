@@ -1,11 +1,15 @@
 const pokemonList = document.getElementById('pokemonList');
 const loadMoreButton = document.getElementById('loadMoreButton')
+
 let offset = 0;
-const limit = 10;
+const limit = 5;
+
+
 
 function loadPokemonItens(offset, limit) {
-    function convertPokemonToLi(pokemon) {
-        return `
+    pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
+        const newHtml = pokemons.map((pokemon) => {
+            return `
             <li class="pokemon ${pokemon.type}">
                 <span class="number">#${pokemon.number}</span>
                 <span class="name">${pokemon.name}</span>
@@ -19,17 +23,14 @@ function loadPokemonItens(offset, limit) {
                         alt="${pokemon.photo.name}">
                 </div>
             </li>
-        `
-    }
-
-    pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
-        const newHtml = pokemons.map(convertPokemonToLi).join('');
-        pokemonList.innerHTML += newHtml;
+        `}).join('');
+        pokemonList.innerHTML += newHtml
     })
 }
 
-loadPokemonItens();
+loadPokemonItens(offset, limit);
 
 loadMoreButton.addEventListener('click', () => {
+    offset += limit
     loadPokemonItens();
 })

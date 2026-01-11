@@ -5,12 +5,12 @@
     --grass: #77c850;
     --fire: #ee7f30;
     --water: #678fee;
-    --eletric: #f7cf2e;
+    --electric: #f7cf2e;
     --ice: #98d5d7;
     --ground: #dfbf69;
     --flying: #a98ff0;
     --poison: #a040a0;
-    --figthing: #bf3029;
+    --fighting: #bf3029;
     --psychic: #f65687;
     --dark: #725847;
     --rock: #b8a137;
@@ -39,8 +39,8 @@
     background-color:var(--water) ;
 }
 
-.eletri {
-    background-color:var(--eletric) ;
+.electric {
+    background-color: var(--electric);
 }
 
 .ice {
@@ -59,11 +59,11 @@
     background-color:var(--poison) ;
 }
 
-.figthig {
-    background-color:var(--figthing) ;
+.fighting {
+    background-color:var(--fighting) ;
 }
 
-.psychi {
+.psychic {
     background-color:var(--psychic) ;
 }
 
