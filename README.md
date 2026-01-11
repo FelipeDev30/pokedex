@@ -110,4 +110,4 @@ Felipe — https://github.com/FelipeDev30
 
 ---
 
-Se quiser, posso criar um commit com todas as alterações aplicadas. Quer que eu faça isso agora?
+OBS: Projeto criado Durante a Formação JavaScript Developer - Digital Innovation One.
