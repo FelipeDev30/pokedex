@@ -96,7 +96,7 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 **Felipe**
 
-- GitHub: [@seu-usuario](https://github.com/FelipeDev30)
+- GitHub: [@FelipeDev30](https://github.com/FelipeDev30)
 
 ---
 
