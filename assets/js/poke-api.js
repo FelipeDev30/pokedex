@@ -8,7 +8,7 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     const [type] = types
 
     pokemon.name = pokeDetail.name
-    pokemon.number = pokeDetail.order
+    pokemon.number = pokeDetail.id
     pokemon.types = types
     pokemon.type = type
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
@@ -16,19 +16,19 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     return pokemon
 }
 
-pokeApi.getPokemonDetail = async (pokemon) => {
-    const response = await fetch(pokemon.url)
-    const pokeDetail = await response.json()
-    return convertPokeApiDetailToPokemon(pokeDetail)
+pokeApi.getPokemonDetail = (pokemon) => {
+    return fetch(pokemon.url)
+        .then((response) => response.json())
+        .then(convertPokeApiDetailToPokemon)
 }
 
-pokeApi.getPokemons = async () => {
+pokeApi.getPokemons = (offset, limit) => {
     const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
 
-    const response = await fetch(url)
-    const jsonBody = await response.json()
-    const pokemons = jsonBody.results
-    const detailRequest = pokemons.map(pokeApi.getPokemonDetail)
-    const pokemonsDetails = await Promise.all(detailRequest)
-    return pokemonsDetails
+    return fetch(url)
+        .then((response) => response.json())
+        .then((jsonBody) => jsonBody.results)
+        .then((pokemons) => pokemons.map(pokeApi.getPokemonDetail))
+        .then((detailRequest) => Promise.all(detailRequest))
+        .then((pokemonsDetails) => pokemonsDetails)
 }
