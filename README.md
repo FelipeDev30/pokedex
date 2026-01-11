@@ -33,71 +33,81 @@ open index.html
 # ou apenas clique duas vezes no arquivo
 ```
 
-## 📁 Estrutura do Projeto
+# 🔴 Pokedex
+
+Uma aplicação web interativa para explorar e descobrir Pokémons. Carrega a lista sob demanda e exibe uma página de detalhes simples para cada Pokémon.
+
+## 🎮 Sobre
+
+Projeto leve e responsivo feito com HTML, CSS e JavaScript (vanilla). Integra com a PokéAPI para obter dados em tempo real.
+
+## ✨ Funcionalidades
+
+- 📱 Design responsivo
+- ⚡ Carregamento dinâmico com `Load More`
+- 🔗 Clique em um Pokémon para ver a página de detalhes
+- 🎨 Interface simples e limpa
+
+## 🚀 Como executar (recomendado)
+
+Alguns navegadores bloqueiam requisições à PokéAPI quando a página é aberta via `file://`. Recomenda-se rodar um servidor HTTP simples:
+
+Usando Python (se instalado):
+```powershell
+cd 'c:\Users\felipe\OneDrive\Documentos\Github\pokedex'
+python -m http.server 8000
+```
+
+Depois abra no navegador: http://localhost:8000
+
+Alternativas: usar a extensão Live Server do VSCode ou outro servidor HTTP estático.
+
+## 📁 Estrutura do projeto
 
 ```
 pokedex/
-├── index.html                 # Arquivo principal HTML
+├── index.html
+├── pages/
+│   └── pokemon.html           # Página de detalhes do Pokémon
 ├── assets/
 │   ├── css/
-│   │   ├── global.css        # Estilos globais
-│   │   └── pokedex.css       # Estilos específicos da Pokedex
+│   │   ├── global.css
+│   │   └── pokedex.css
 │   └── js/
-│       ├── main.js           # Script principal
-│       ├── poke-api.js       # Integração com PokéAPI
-│       └── pokemon-model.js  # Modelo de dados do Pokémon
+│       ├── main.js
+│       ├── poke-api.js
+│       ├── pokemon-model.js
+│       └── pokemon-detail.js  # Script da página de detalhes
 └── README.md
 ```
 
-## 🛠️ Tecnologias Utilizadas
+## 📖 Como usar
 
-- **HTML5** - Estrutura semântica
-- **CSS3** - Estilos e layout responsivo
-- **JavaScript (Vanilla)** - Lógica da aplicação
-- **PokéAPI** - Base de dados de Pokémons
-- **Normalize.css** - Reset CSS
+1. Abra a aplicação (recomendado via servidor local)
+2. A lista inicial de Pokémons é carregada automaticamente
+3. Clique em um cartão de Pokémon para abrir a página de detalhes
+4. Use "Load More" para carregar mais Pokémons
 
-## 📖 Como Usar
+## ✅ Status
 
-1. Abra a aplicação no navegador
-2. A página carregará automaticamente os primeiros Pokémons
-3. Clique no botão "Load More" para carregar mais Pokémons
-4. Observe a lista se expandindo conforme você interage
+- Página de detalhes implementada: ✅ (`pages/pokemon.html` + `assets/js/pokemon-detail.js`)
+- Busca por nome e filtros: planejado
+- Favoritos e modo escuro: planejado
 
-## 🎯 Funcionalidades Planejadas
+## 🛠️ Tecnologias
 
-- [ ] Busca por nome de Pokémon
-- [ ] Filtro por tipo
-- [ ] Página de detalhes do Pokémon
-- [ ] Favoritos/Marcar Pokémons
-- [ ] Modo escuro
+- HTML5, CSS3, JavaScript (Vanilla)
+- PokéAPI
+- Normalize.css
 
-## 📝 Contribuindo
+## 🤝 Contribuindo
 
-Contribuições são bem-vindas! Sinta-se livre para:
-
-1. Fork o projeto
-2. Criar uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abrir um Pull Request
-
-## 📄 Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
-## 🙏 Agradecimentos
-
-- [PokéAPI](https://pokeapi.co/) - API gratuita de Pokémon
-- [Normalize.css](https://necolas.github.io/normalize.css/) - Reset CSS
-- Comunidade GitHub e contribuidores
+Contribuições são bem-vindas — crie um fork, branch com sua feature, e abra um pull request.
 
 ## 👨‍💻 Autor
 
-**Felipe**
-
-- GitHub: [@FelipeDev30](https://github.com/FelipeDev30)
+Felipe — https://github.com/FelipeDev30
 
 ---
 
-⭐ Se este projeto foi útil, considere dar uma estrela!
+Se quiser, posso criar um commit com todas as alterações aplicadas. Quer que eu faça isso agora?
