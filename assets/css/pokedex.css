@@ -24,19 +24,19 @@
 /* Background  of Types */
 
 .normal {
-    background-color:var(--normal) ;
+    background-color: var(--normal);
 }
 
 .grass {
-    background-color:var(--grass) ;
+    background-color: var(--grass);
 }
 
 .fire {
-    background-color:var(--fire) ;
+    background-color: var(--fire);
 }
 
 .water {
-    background-color:var(--water) ;
+    background-color: var(--water);
 }
 
 .electric {
@@ -44,56 +44,56 @@
 }
 
 .ice {
-    background-color:var(--ice) ;
+    background-color: var(--ice);
 }
 
 .ground {
-    background-color:var(--ground) ;
+    background-color: var(--ground);
 }
 
 .flying {
-    background-color:var(--flying) ;
+    background-color: var(--flying);
 }
 
 .poison {
-    background-color:var(--poison) ;
+    background-color: var(--poison);
 }
 
 .fighting {
-    background-color:var(--fighting) ;
+    background-color: var(--fighting);
 }
 
 .psychic {
-    background-color:var(--psychic) ;
+    background-color: var(--psychic);
 }
 
 .dark {
-    background-color:var(--dark) ;
+    background-color: var(--dark);
 }
 
 .rock {
-    background-color:var(--rock) ;
+    background-color: var(--rock);
 }
 
-.bug{
-    background-color:var(--bug) ;
+.bug {
+    background-color: var(--bug);
 }
 
 .steel {
-    background-color:var(--steel) ;
+    background-color: var(--steel);
 }
 
 .dragon {
-    background-color:var(--dragon) ;
+    background-color: var(--dragon);
 }
 
 .fairy {
-    background-color:var(--fairy) ;
+    background-color: var(--fairy);
 }
 
 .ghost {
     background-color: var(--ghost);
-} 
+}
 
 .dark {
     background-color: var(--dark);
@@ -110,6 +110,16 @@
     margin: .5rem;
     padding: 2rem 1rem;
     border-radius: 1rem;
+    /* Garante uma transição suave entre os estados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Define a elevação inicial do elemento */
+    transform: translateY(.3rem);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .pokemon .number {
@@ -140,7 +150,7 @@
     font-size: .625rem;
     filter: brightness(1.1);
     text-align: center;
-    
+
 }
 
 .pokemon .detail img {
@@ -179,6 +189,7 @@
 .pokemon-detail-container {
     padding: 1rem;
 }
+
 .pokemon-detail-card {
     max-width: 720px;
     margin: 1rem auto;
@@ -187,10 +198,12 @@
     background: linear-gradient(135deg, rgba(189, 181, 181, 0.9), rgba(90, 88, 88, 0.9));
     text-align: center;
 }
+
 .pokemon-detail-card img {
     width: 220px;
     height: 220px;
 }
+
 .pokemon-detail-card .types {
     display: inline-flex;
     gap: .5rem;
