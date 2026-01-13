@@ -114,12 +114,12 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* Define a elevação inicial do elemento */
     transform: translateY(.3rem);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.384);
 }
 
 .pokemon:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.377);
 }
 
 .pokemon .number {
