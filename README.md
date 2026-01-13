@@ -18,18 +18,16 @@ Projeto leve e responsivo feito com HTML, CSS e JavaScript (vanilla). Integra co
 Alguns navegadores bloqueiam requisições à PokéAPI quando a página é aberta via `file://`. Recomenda-se rodar um servidor HTTP simples:
 
 Usando Python (se instalado):
-```powershell
-cd 'c:\Users\felipe\OneDrive\Documentos\Github\pokedex'
-python -m http.server 8000
-```
+Shellcd 'c:\Users\felipe\OneDrive\Documentos\Github\pokedex'python -m http.server 8000Mostrar mais linhas
+Depois, abra no navegador:
+http://localhost:8000
+Alternativas:
 
-Depois abra no navegador: http://localhost:8000
+Extensão Live Server do VSCode
+Qualquer outro servidor HTTP estático
 
-Alternativas: usar a extensão Live Server do VSCode ou outro servidor HTTP estático.
 
-## 📁 Estrutura do projeto
-
-```
+📁 Estrutura do projeto
 pokedex/
 ├── index.html
 ├── pages/
@@ -44,35 +42,42 @@ pokedex/
 │       ├── pokemon-model.js
 │       └── pokemon-detail.js  # Script da página de detalhes
 └── README.md
-```
 
-## 📖 Como usar
 
-1. Abra a aplicação (recomendado via servidor local)
-2. A lista inicial de Pokémons é carregada automaticamente
-3. Clique em um cartão de Pokémon para abrir a página de detalhes
-4. Use "Load More" para carregar mais Pokémons
+📖 Como usar
 
-## ✅ Status
+Abra a aplicação (preferencialmente via servidor local)
+A lista inicial de Pokémons será carregada automaticamente
+Clique em um cartão para abrir a página de detalhes
+Use o botão Load More para carregar mais Pokémons
 
-- Página de detalhes implementada: ✅ (`pages/pokemon.html` + `assets/js/pokemon-detail.js`)
-- Busca por nome e filtros: planejado
-- Favoritos e modo escuro: planejado
 
-## 🛠️ Tecnologias
+✅ Status do projeto
 
-- HTML5, CSS3, JavaScript (Vanilla)
-- PokéAPI
-- Normalize.css
+✅ Página de detalhes implementada (pages/pokemon.html + assets/js/pokemon-detail.js)
+🔍 Busca por nome e filtros: planejado
+⭐ Favoritos e modo escuro: planejado
 
-## 🤝 Contribuindo
 
-Contribuições são bem-vindas — crie um fork, branch com sua feature, e abra um pull request.
+🛠️ Tecnologias utilizadas
 
-## 👨‍💻 Autor
+HTML5, CSS3, JavaScript (Vanilla)
+PokéAPI
+Normalize.css
 
+
+🤝 Como contribuir
+Contribuições são bem-vindas!
+Para colaborar:
+
+Faça um fork do projeto
+Crie uma branch para sua feature (git checkout -b minha-feature)
+Faça o commit das alterações (git commit -m 'Minha feature')
+Envie para o repositório (git push origin minha-feature)
+Abra um Pull Request
+
+
+👨‍💻 Autor
 Felipe — https://github.com/FelipeDev30
 
----
-
-Observação: Projeto originalmente criado pela Digital Innovation One e posteriormente modificado durante o curso Formação JavaScript Developer por Felipe Lamas (EU).
+Observação: Projeto originalmente criado pela Digital Innovation One e posteriormente modificado durante o curso Formação JavaScript Developer por Felipe Lamas.
