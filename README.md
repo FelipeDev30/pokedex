@@ -79,5 +79,6 @@ Abra um Pull Request
 
 👨‍💻 Autor
 Felipe — https://github.com/FelipeDev30
+Git Pages - https://felipedev30.github.io/pokedex/
 
 Observação: Projeto originalmente criado pela Digital Innovation One e posteriormente modificado durante o curso Formação JavaScript Developer por Felipe Lamas.
